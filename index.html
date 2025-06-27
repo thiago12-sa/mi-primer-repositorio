@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mi Página Web</title>
+<style>
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+html, body {
+height: 100%;
+font-family: Arial, sans-serif;
+background-color: white;
+}
+body {
+display: flex;
+flex-direction: column;
+height: 100%;
+}
+.wrapper {
+display: flex;
+flex-direction: column;
+/*
+flex-grow: 1 => permite que el contenedor crezca para ocupar
+todo el espacio disponible en el eje principal (vertical).
+*/
+flex-grow: 1;
+/*
+flex-shrink: 1 => permite que el contenedor se reduzca si
+no hay suficiente espacio en pantalla.
+*/
+flex-shrink: 1;
+/*
+flex-basis: 0% => indica que el tamaño base inicial del
+contenedor es 0; el tamaño final se determina solo por grow/shrink.
+*/
+flex-basis: 0%;
+}
+header {
+background-color: #333;
+color: white;
+padding: 20px 0;
+}
+nav {
+display: flex;
+justify-content: center;
+gap: 40px;
+}nav a {
+color: white;
+text-decoration: none;
+font-weight: bold;
+padding: 8px 16px;
+}
+nav a:hover {
+background-color: #555;
+border-radius: 5px;
+}
+main {
+display: flex;
+flex-direction: column;
+gap: 20px;
+padding: 40px 20px;
+max-width: 800px;
+margin: auto;
+background-color: white;
+}
+section {
+padding: 20px;
+border: 1px solid #ddd;
+border-radius: 8px;
+}
+footer {
+text-align: center;
+padding: 20px;
+background-color: #333;
+color: white;
+}
+</style>
+</head>
+<body>
+<div class="wrapper">
+<header>
+<nav>
+<a href="index.html">Inicio</a>
+<a href="servicios.html">Servicios</a>
+<a href="contacto.html">Contacto</a>
+</nav>
+</header>
+<main>
+<section id="inicio">
+<h2>Inicio</h2>
+<p>Bienvenido a nuestra página web. Aquí encontrarás información
+sobre nuestros servicios y cómo contactarnos.</p>
+</section>
+<section id="servicios">
+<h2>Servicios</h2>
+<p>Ofrecemos desarrollo web, diseño responsivo, y soluciones a
+medida para tu negocio.</p>
+</section>
+<section id="contacto"><h2>Contacto</h2>
+<p>Puedes escribirnos a <a
+href="mailto:contacto@ejemplo.com">contacto@ejemplo.com</a> o llamarnos al
+(123) 456-7890.</p>
+</section>
+</main>
+</div>
+<footer>
+&copy; 2025 Mi Página Web. Todos los derechos reservados.
+</footer>
+</body>
+</html>
